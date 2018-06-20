@@ -1,16 +1,23 @@
+import { HttpModule } from '@angular/http';
+import { CommentsService } from './comments/comments.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CommentsComponent
+    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
+   
   ],
-  providers: [],
+  providers: [CommentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
